@@ -1,0 +1,11 @@
+单个应用的配置可以写在index.php 或admin.php里
+
+
+control 目录里的自建的user.class.php自动继承common.class.php-->action-->mytpl-->smarty
+
+控制器里模块article user等用算法 自动继承了，如果要验证的话 可以且只能 继承extends Action
+
+控制器里通过url   admin.php/user/mod/id=5 传入参数
+
+
+模版名content.tpl跟操作名content() 必须是相同的

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="<?php echo base_url() ?>style/admin/css/public.css">
+	<title>编辑栏目</title>
+</head>
+<body>
+	<form action="<?php echo site_url('cate/edit') ?>" method="POST">
+	<table class="table">
+		<tr>
+			<td colspan="10" class="th">编辑栏目</td>
+		</tr>
+		<tr>
+			<td>栏目名称</td>
+			<td>
+				<input type="text" name="cname" value="<?php echo $cate[0]['cname'] ?>">
+				<?php echo form_error('cname','<span>','</span>') ?>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="10"> 
+				<!-- 为分类做准备 -->
+				<input type="hidden" name="cid" value="<?php echo $cate[0]['cid'] ?>">
+
+				<input type="submit" value="提交" class="input_button">
+			</td>
+		</tr>
+
+	</table>
+	</form>
+</body>
+</html>

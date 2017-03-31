@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<title>ARPHER的文章博客</title>
+<link href="<?php echo base_url() . 'style/index/' ?>css/details.css" rel="stylesheet" />
+	<?php $this->load->view('index/header.html') ?>
+
+	<div id="main">
+		<div class='details'>
+			<h1><?php echo $content[0]['title'] ?></h1>
+			<div class='info'>
+				<div class='base'>
+					<em>发表于 <?php echo date('Y-m-d H:i',$content[0]['atime']) ?>
+					</em>
+					, 作者:<span><?php echo $this->session->userdata('username') ?>
+					</span>, 
+					分类：<strong><?php echo $content[0]['cname'] ?></strong>
+				</div>
+				<div class='tag'>
+					标签:
+					<a href="">作者</a>,
+					<a href="">分类</a>
+				</div>
+			</div>
+			<div class='content'><?php echo $content[0]['content'] ?></div>
+		</div>
+		<?php $this->load->view('index/right.html') ?>
+	</div>
+
+<?php $this->load->view('index/footer.html') ?>

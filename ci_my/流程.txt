@@ -1,0 +1,24 @@
+1.配置自动加载url函数
+2.设置控制器Home(3.0版本路由默认不支持文件夹目录)
+3.配置路由
+4.加汉化包，配置语言
+5.配置表单验证数组form_validation.php
+6.配置自动加载数据库$autoload['libraries'] = array('database');
+7.配置防跨站输入过滤$config['global_xss_filtering'] = TRUE;
+8.单入口index.php设置时区
+9.自定义验证码类库 放到application\libraries 文件名Code.php 字体放到system\fonts()     (ci验证在根目录建captcha文件夹)
+10.配置SESSION密钥$config['encryption_key'] = 'asdfghjkl';
+配置自动载入session
+11.自定义公共类MY_Controller 位置\application\core
+
+12.配置路由
+13.去掉index.php:
+	apache  的 http.conf的 LoadModule rewrite_module modules/mod_rewrite.so 开启
+							www目录的AllowOverride All开启
+	根目录新建.htaccess
+	配置$config['index_page'] = '';
+	重启apache
+14.伪静态：
+15.开启缓存 application\cache可写
+			$this->output->cache(n); n单位分钟 放在控制器方法的随便地方都行
+16.单入口 调成产品 模式
